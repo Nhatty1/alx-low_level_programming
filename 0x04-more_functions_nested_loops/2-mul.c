@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * mul - Do something
- * Return: Return something
- * @a: do something
- * @b: do something
+ *mul - Do something
+ *Return: Return something
+ *@a: do something
+ *@b: do something
  */
 int mul(int a, int b)
 {
-	int multi;
-	multi = a * b;
-	return (multi);
+int multi;
+multi = a * b;
+return (multi);
 }
