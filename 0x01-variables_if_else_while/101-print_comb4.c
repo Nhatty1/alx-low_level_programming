@@ -21,3 +21,17 @@ putchar((char)(o + 48));
 putchar((char)(n + 48));
 if (!(n == 9 && o == 8 && w == 7))
 {
+putchar(44);
+putchar(32);
+}
+else
+{
+putchar('\n');
+}
+}
+}
+}
+}
+}
+return (0);
+}
