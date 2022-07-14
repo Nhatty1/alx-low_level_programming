@@ -1,24 +1,115 @@
-/*
- * File: 0-strcat.c
- * Auth: Nhatty
- */
-
 #include "main.h"
 
+#include <stdio.h>
+
 /**
- *strcat-Concatenates the string pointed to by @src,including the terminating
- * null byte, to the end of the string pointed to by @dest.
- * @dest: A pointer to the string to be concatenated upon.
- * @src: The source string to be appended to @dest.
+ * print_line - prints a s bytes of a buffer
  *
- * Return: A pointer to the destination string @dest.
+ * @c: buffer to print
+ *
+ * @s: bytes of buffer to print
+ *
+ * @l: line of buffer to print
+ *
+ *
+ *
+ * Return: void
+ *
  */
-char *strcat(char *dest, const char *src)
+
+void print_line(char *c, int s, int l)
+
 {
-int index = 0, dest_len = 0;
-while (dest[index++])
-dest_len++;
-for (index = 0; src[index]; index++)
-dest[dest_len++] = src[index];
-return (dest);
+
+int j, k;
+
+for (j = 0; j <= 9; j++)
+
+{
+
+if (j <= s)
+
+printf("%02x", c[l * 10 + j]);
+
+else
+
+printf("  ");
+
+if (j % 2)
+
+putchar(' ');
+
+}
+
+for (k = 0; k <= s; k++)
+
+{
+
+if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+
+putchar(c[l * 10 + k]);
+
+else
+
+putchar('.');
+
+}
+
+}
+
+
+
+
+/**
+ * print_buffer - prints a buffer
+ *
+ * @b: buffer to print
+ *
+ * @size: size of buffer
+ *
+ *
+ *
+ * Return: void
+ *
+ */
+
+void print_buffer(char *b, int size)
+
+{
+
+int i;
+
+
+
+
+for (i = 0; i <= (size - 1) / 10 && size; i++)
+
+{
+
+printf("%08x: ", i * 10);
+
+if (i < size / 10)
+
+{
+
+print_line(b, 9, i);
+
+}
+
+else
+
+{
+
+print_line(b, size % 10 - 1, i);
+
+}
+
+putchar('\n');
+
+}
+
+if (size == 0)
+
+putchar('\n');
+
 }
