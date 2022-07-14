@@ -46,21 +46,14 @@ break;
 else if (*(b + index + byte) >= 31 &&
 
 *(b + index + byte) <= 126)
-
 printf("%c", *(b + index + byte));
-
 else
-	
 printf(".");
-
 }
-
-										if (byte >= size)
-																		continue;
-
-																printf("\n");
-																	}
-
-				if (size <= 0)
-							printf("\n");
+if (byte >= size)
+continue;
+printf("\n");
+}
+if (size <= 0)
+	printf("\n");
 }
