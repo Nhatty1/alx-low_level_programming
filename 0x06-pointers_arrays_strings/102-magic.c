@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+* main - Entry point
+* Description: 102-magic.c
+* Return: Always 0 (Success)
+*/
 
 int main(void)
 {
