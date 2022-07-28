@@ -58,6 +58,7 @@ return (array);
  * Return: A pointer to the next non-zero element.
  */
 char *iterate_zeroes(char *str)
+
 {
 while (*str && *str == '0')
 	str++;
@@ -74,6 +75,7 @@ return (str);
  * Return: The converted int.
  */
 int get_digit(char c)
+
 {
 	int digit = c - '0';
 
@@ -97,20 +99,21 @@ return (digit);
  * exits with a status value of 98.
  */
 void get_prod(char *prod, char *mult, int digit, int zeroes)
+
 {
 	int mult_len, num, tens = 0;
 
 	mult_len = find_len(mult) - 1;
 	mult += mult_len;
 
-while (*prod)
+	while (*prod)
 {
 	*prod = 'x';
 	prod++;
 }
 	prod--;
 
-while (zeroes--)
+	while (zeroes--)
 {
 	*prod = '0';
 	prod--;
