@@ -20,7 +20,7 @@ int find_len(char *str)
 while (*str++)
 	len++;
 
-	return (len);
+return (len);
 }
 
 /**
@@ -59,10 +59,10 @@ return (array);
  */
 char *iterate_zeroes(char *str)
 {
-	while (*str && *str == '0')
+while (*str && *str == '0')
 	str++;
 
-	return (str);
+return (str);
 }
 
 /**
@@ -103,14 +103,14 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 	mult_len = find_len(mult) - 1;
 	mult += mult_len;
 
-	while (*prod)
+while (*prod)
 {
 	*prod = 'x';
 	prod++;
 }
 	prod--;
 
-	while (zeroes--)
+while (zeroes--)
 {
 	*prod = '0';
 	prod--;
