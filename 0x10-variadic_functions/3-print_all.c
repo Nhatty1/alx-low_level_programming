@@ -1,4 +1,4 @@
-nclude "variadic_functions.h"
+#include "variadic_functions.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -63,10 +63,10 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	while (format && format[i])
-	{
+while (format && format[i])
+{
 	j = 0;
-	while (j < 4)
+while (j < 4)
 	{
 	if (*printType[j].type == format[i])
 {
@@ -78,7 +78,7 @@ void print_all(const char * const format, ...)
 	j++;
 }
 	i++;
-	}
+}
 
 	printf("\n");
 	va_end(list);
